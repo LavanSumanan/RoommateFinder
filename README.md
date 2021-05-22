@@ -1,1 +1,4 @@
-# RoommateFinder
+## RoommateFinder
+
+# Dependencies
+- Flask
