@@ -107,4 +107,4 @@ def result(user_id):
     return render_template("result.html", elements=[data["personality"], data["matches"]])
 
 if __name__ == "__main__":
-    app.run(debug=True)
+  app.run()
