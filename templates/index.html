@@ -1,3 +1,8 @@
 {% extends "base.html" %}
 {% block title %}Home{% endblock %}
-{% block content%}<p>Lucifer sitnky</p>{% endblock %}
+{% block content%}
+<div class="d-inline-block position-relative fill" >
+    <img src="{{url_for('static', filename='titleimage.png')}}" class="img-fluid" alt="responsive image">
+    <a href="form" class="btn btn-info" role="button" style="position: absolute; background-color: #145314; color:white; padding: 15px; padding-left: 20px; padding-right: 20px;bottom: 19%; right: calc(50% - 250px/2)">Click here to fill out the form!</a>
+</div>
+{% endblock %}

@@ -1,11 +1,216 @@
 {% extends "base.html" %}
 {% block title %}Form{% endblock %}
 {% block content %}
-<form action="#" method="POST">
-    <p>Enter your name:</p>
-    <input type="text" name="nm">
-    <p>Enter your age:</p>
-    <input type="number" name="age">
-    <input type="submit" value="submit">
-</form>
+  <form action="#" method="POST" style="padding: 3em 5em 5em 5em;">
+  <!-- WARNING -->
+  <h1>{{message}}</h1>
+  <!--PROFILE-->
+    <div class="mb-3"> <!--NAME-->
+      <label for="name" class="form-label">Name</label>
+      <input required name="name" type="text" class="form-control" id="name" aria-describedby="name">
+    </div>
+    
+    <div class="mb-3"> <!--GENDER--> 
+      <label for="gender" class="form-label">Gender</label>
+    <select required name= "gender" class="form-select" aria-label="gender">
+      <option selected></option>
+      <option value="Female">Female</option>
+      <option value="Male">Male</option>
+      <option value="Other">Other</option>
+      </div>
+    </div>
+    </select>
+
+    <div class="mb-3"> <!--ROOM GENDER--> 
+      <label for="roomgender" class="form-label">Would you be willing to room with the other genders?</label>
+    <select required name = "roomgender" class="form-select" aria-label="roomgender">
+      <option selected></option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+      </div>
+    </div>
+    </select>
+
+    <div class="mb-3"> <!--LENGTH OF STAY--> 
+      <label for="lengthofstay" class="form-label">How long do you need a roomate for?</label>
+    <select required name = "lengthofstay" class="form-select" aria-label="lengthofstay">
+      <option selected></option>
+      <option value="4">4 Months</option>
+      <option value="8">8 Months</option>
+      </div>
+    </div>
+    </select>
+
+    <div class="mb-3"> <!--UNIVERSITY--> 
+      <label for="university" class="form-label">What University do you study at?</label>
+    <select required name="university" class="form-select" aria-label="university">
+      <option selected></option>
+      <option value="UW">University of Waterloo</option>
+      <option value="WLU">Wilfrid Laurier University</option>
+      <option value="UWO">Western University</option>
+      <option value="QU">Queen's University</option>
+      <option value="MU">McMaster University</option>
+      </div>
+    </div>
+    </select>
+
+    <div class="mb-3"> <!--MAJORS--> 
+      <label for="major" class="form-label">What is your major of study?</label>
+    <select required name="major" class="form-select" aria-label="major">
+      <option selected></option>
+      <option value="Accounting/Finance/Business">Accounting/Finance/Business</option>
+      <option value="Communications/English/Languages">Communications/English/Languages</option>
+      <option value="Computer Science/Math">Computer Science/Math</option>
+      <option value="Engineering">Engineering</option>
+      <option value="Sciences/Biology/Chemistry/Physics/Life/Health/Med">Sciences/Biology/Chemistry/Physics/Life/Health/Med</option>
+      <option value="Geography/History">Geography/History</option>
+      <option value="Music/Visual Arts/Dramatic Arts">Music/Visual Arts/Dramatic Arts</option>
+      </div>
+    </div>
+    </select>
+
+    <!--INTERESTS (CLICK ALL THAT APPLY)-->
+
+    <div class="mb-3">
+      <label for="interests" class="form-label">Select your interests</label>
+      <div class="form-check" id="interests">
+        <input name="interests" class="form-check-input" type="checkbox" value="Arts" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Arts
+        </label>
+      </div>
+      <div class="form-check" id="interests">
+        <input name="interests" class="form-check-input" type="checkbox" value="Sports" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Sports
+        </label>
+      </div>
+      <div class="form-check" id="interests">
+        <input name="interests" class="form-check-input" type="checkbox" value="Medicine" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Medicine
+        </label>
+      </div>
+      <div class="form-check" id="interests">
+        <input name="interests" class="form-check-input" type="checkbox" value="Entrepreneurship" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Entrepreneurship
+        </label>
+      </div>
+      <div class="form-check" id="interests">
+        <input name="interests" class="form-check-input" type="checkbox" value="History" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          History
+        </label>
+      </div>
+      <div class="form-check" id="interests">
+        <input name="interests" class="form-check-input" type="checkbox" value="Technology" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Technology
+        </label>
+      </div>
+      <div class="form-check" id="interests">
+        <input name="interests" class="form-check-input" type="checkbox" value="Languages" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Languages
+        </label>
+      </div>
+      <div class="form-check" id="interests">
+        <input name="interests" class="form-check-input" type="checkbox" value="Cultures" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Cultures
+        </label>
+      </div>
+      <div class="form-check" id="interests">
+        <input name="interests" class="form-check-input" type="checkbox" value="Culinary Arts" id="flexCheckDefault">
+        <label class="form-check-label" for="flexCheckDefault">
+          Culinary Arts
+        </label>
+      </div>
+    </div>
+
+    <!--HABITS-->
+
+    <div class="mb-3"> <!--PARTY HABITS--> 
+      <label for="party" class="form-label">How often do you party?</label>
+    <select required name="party" class="form-select" aria-label="party">
+      <option selected></option>
+      <option value="Never">Never</option>
+      <option value="Sometimes">Sometimes</option>
+      <option value="Often">Often</option>
+      <option value="Always">Always</option>
+      </div>
+    </div>
+    </select>
+
+    <div class="mb-3"> <!--BEDTIME--> 
+      <label for="bedtime" class="form-label">When do you typically go to bed?</label>
+    <select required name="bedtime" class="form-select" aria-label="bedtime">
+      <option selected></option>
+      <option value="10">Before 10pm</option>
+      <option value="12">10pm-12am</option>
+      <option value="3">12am-3am</option>
+      <option value="7">3am-7am</option>
+      <option value="-1">I don't sleep.</option>
+      </div>
+    </div>
+    </select>
+
+    <div class="mb-3"> <!--WAKETIME--> 
+      <label for="waketime" class="form-label">When do you typically get out of bed?</label>
+    <select required name="waketime" class="form-select" aria-label="waketime">
+      <option selected></option>
+      <option value="6">Before 6am</option>
+      <option value="8">6am-8am</option>
+      <option value="10">8am-10am</option>
+      <option value="12">10am-12pm</option>
+      <option value="12+">After 12pm</option>
+      </div>
+    </div>
+    </select>
+
+    <div class="mb-3"> <!--NOISE LEVEL--> 
+      <label for="noiselevel" class="form-label">How quiet are you?</label>
+    <select required name = "noiselevel" class="form-select" aria-label="noiselevel">
+      <option selected></option>
+      <option value="Quiet">Quiet</option>
+      <option value="Normal">Normal</option>
+      <option value="Loud">Loud</option>
+      </div>
+    </div>
+    </select>
+
+    <div class="mb-3"> <!--NEATNESS--> 
+      <label for="neatness" class="form-label">Rate your neatness from 1-5 (1 is disorganized, 5 is super neat)?</label>
+      <select required name = "neatness" class="form-select" aria-label="neatness">
+        <option selected></option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+    </div>
+    </select>
+
+    <!--HOUSING-->
+
+
+    <!--REGISTRATION-->
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input required name="username" type="text" class="form-control" id="username">
+    </div>
+
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input required name="password" type="password" class="form-control" id="password">
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input required name="email" type="email" class="form-control" id="email">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
 {% endblock %}

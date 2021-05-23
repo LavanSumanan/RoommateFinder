@@ -1,5 +1,31 @@
 {% extends "base.html" %}
-{% block title %}Form{% endblock %}
+{% block title %}Results{% endblock %}
 {% block content %}
-    <p>{{age}}</p>
+<div class="container-fluid mt-3">
+ 
+    <div class="d-inline-flex d-sm-flex p-2 mb-5 bg-secondary" style="justify-content: center;">
+       <b class="ml-3 text-light"> You are the <em>{{elements[0]}}</em> kind of roommate.</b>
+    </div>
+     
+    <div class="d-inline-flex d-sm-flex p-2 mb-5 bg-secondary" style="justify-content: center;">
+        <b class="ml-3 text-light">You have matched with the following people:</b>
+     </div>
+     <!--INSERT MATCHES-->
+     <div class="d-flex flex-column d-sm-flex p-2 mb-5" style="justify-content: center;">
+    {% for match in elements[1] %}
+     <h5 class="flex-row-1">Name: {{match["id"]}}</h6>
+     <h5 class="flex-row-1">Gender: {{match["gender"]}}</h6>
+     <h5 class="flex-row-1">Interests:</h6>
+         {% for interest in match["interests"] %}
+             <h6>{{interest}}</h5>
+         {% endfor %}
+         <br>
+     {% endfor %}
+    </div>
+
+     <div class="d-inline-flex d-sm-flex p-2 mb-5 bg-secondary" style="justify-content: center;">
+        <b class="ml-3 text-light">Check out the profiles page for more info!</b>
+     </div>
+
+  </div>
 {% endblock %}
