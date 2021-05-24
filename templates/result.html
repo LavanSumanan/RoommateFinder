@@ -13,7 +13,7 @@
      <!--INSERT MATCHES-->
      <div class="d-flex flex-column d-sm-flex p-2 mb-5" style="justify-content: center;">
     {% for match in elements[1] %}
-     <h5 class="flex-row-1">Name: {{match["id"]}}</h6>
+     <h5 class="flex-row-1">Name: {{match["name"]}}</h6>
      <h5 class="flex-row-1">Gender: {{match["gender"]}}</h6>
      <h5 class="flex-row-1">Interests:</h6>
          {% for interest in match["interests"] %}
