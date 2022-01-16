@@ -1,4 +1,4 @@
-# Dioscura: The Roommate Finder
+# Dioscuri: The Roommate Finder
 
 ## Why we made it
 - As incoming university students, we've faced the struggle of finding a suitable roommate
